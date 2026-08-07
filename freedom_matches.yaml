@@ -1,0 +1,286 @@
+- name: addition-of-the-zalasr-extension-for
+  description: Addition of the Zalasr extension for Load-Acquire/Store-Release operations.
+  type: optionality
+  constraints: This sentence describes an addition, implying it's optional or discretionary as not all
+    RISC-V implementations may support or choose to implement this feature.
+- name: the-inclusion-of-all-ratified-extensions
+  description: The inclusion of all ratified extensions through May 2025.
+  type: implementation_deferral
+  constraints: This sentence indicates the inclusion is conditional on extensions being ratified, suggesting
+    optionality based on ratification status.
+- name: addition-of-the-bfloat16-precision-floating
+  description: Addition of the BFloat16-precision Floating Point extension.
+  type: optionality
+  constraints: This describes an added feature which may not be present in all RISC-V implementations,
+    indicating optionality.
+- name: addition-of-the-zabha-extension-for
+  description: Addition of the Zabha extension for Byte and Halfword Atomic Memory Operations.
+  type: optionality
+  constraints: Similar to other additions listed, this implies an optional feature dependent on implementation
+    choice.
+- name: the-draft-zam-extension-has-been
+  description: The draft Zam extension has been removed, in favor of the definition of a misaligned atomicity
+    granule PMA.
+  type: implementation_deferral
+  constraints: This sentence describes removal of a draft extension, indicating that its inclusion was
+    not mandatory and subject to change.
+- name: the-concept-of-vacant-memory-regions
+  description: The concept of vacant memory regions has been superseded by inaccessible memory or I/O
+    regions.
+  type: convention_or_recommendation
+  constraints: This describes a change in convention, indicating that while it's documented, the specific
+    handling (vacant vs. inaccessible) may vary across implementations.
+- name: the-removal-of-unratified-content-including
+  description: The removal of unratified content, including the sketch of the RV128I base ISA.
+  type: implementation_deferral
+  constraints: This sentence describes the removal of unratified material, indicating that such content
+    is not mandatory and subject to implementation decisions.
+- name: changed-description-of-misaligned-load-and
+  description: Changed description of misaligned load and store behavior. The specification now allows
+    visible misaligned address traps in execution environment interfaces, rather than just mandating invisible
+    handling of misaligned loads and stores in user mode.
+  type: variability
+  constraints: This sentence describes a change from mandatory invisible handling to optional visible
+    handling of misaligned loads and stores, allowing for misaligned address traps.
+- name: moved-fence-i-out-of-the
+  description: Moved FENCE.I out of the mandatory base and into a separate extension, with Zifencei ISA
+    name. FENCE.I was removed from the Linux user ABI and is problematic in implementations with large
+    incoherent instruction and data caches. However, it remains the only standard instruction-fetch coherence
+    mechanism.
+  type: optionality
+  constraints: This sentence describes moving FENCE.I to an optional extension, acknowledging its problematic
+    nature in certain implementations while noting it as the sole standard for instruction-fetch coherence.
+- name: counter-timer-instructions-are-now-not
+  description: Counter/timer instructions are now not considered part of the mandatory base ISA, and so
+    CSR instructions were moved into separate chapter and marked as version 2.0, with the unprivileged
+    counters moved into another separate chapter. The counters are not ready for ratification as there
+    are outstanding issues, including counter inaccuracies.
+  type: optionality
+  constraints: This sentence indicates that counter/timer instructions are no longer mandatory but are
+    considered part of a separate, non-ratified version (2.0), highlighting their current unfinished and
+    optional status.
+- name: a-csr-access-ordering-model-has
+  description: A CSR-access ordering model has been added.
+  type: implementation_deferral
+  constraints: This sentence describes the addition of a CSR-access ordering model, which implies an implementation-defined
+    or conventional aspect since specific ordering details may vary across implementations.
+- name: to-date-no-parts-of-the
+  description: To date, no parts of the standard have been officially ratified by the RISC-V Foundation,
+    but the components labeled “frozen” above are not expected to change during the ratification process
+    beyond resolving ambiguities and holes in the specification.
+  type: implementation_deferral
+  constraints: This sentence indicates that certain parts of the standard may change during ratification,
+    implying optionality or implementation deferral.
+- name: removed-text-of-p-extension-chapter
+  description: Removed text of P extension chapter as now superseded by active task group documents.
+  type: vendor_platform_dependency
+  constraints: This sentence indicates that the P extension chapter has been removed in favor of other
+    documents, suggesting vendor/platform-dependency or discretionary behavior.
+- name: a-draft-proposal-of-the-v
+  description: A draft proposal of the V vector instruction-set extension.
+  type: permission_modal
+  constraints: This sentence presents a draft proposal, indicating that it is not yet finalized and subject
+    to change, thus showing optional or discretionary behavior.
+- name: an-early-draft-proposal-of-the
+  description: An early draft proposal of the N user-level traps extension.
+  type: permission_modal
+  constraints: This sentence presents an early draft proposal, indicating that it is not yet finalized
+    and subject to change, thus showing optional or discretionary behavior.
+- name: removal-of-the-calling-convention-chapter
+  description: Removal of the calling convention chapter, which has been superseded by the RISC-V ELF
+    psABI Specification (RISC-V ELF PsABI Specification, n.d.).
+  type: vendor_platform_dependency
+  constraints: This sentence indicates that the calling convention chapter has been removed in favor of
+    another specification, suggesting vendor/platform-dependency or discretionary behavior.
+- name: the-c-extension-has-been-frozen
+  description: The C extension has been frozen and renumbered version 2.0.
+  type: implementation_deferral
+  constraints: This sentence indicates that the C extension is now fixed, but the act of freezing itself
+    implies a previous state of variability or optionality.
+- name: the-isa-has-been-divided-into
+  description: The ISA has been divided into an integer base with several standard extensions.
+  type: optionality
+  constraints: This sentence describes a division of the ISA, implying optionality in choosing which extensions
+    to include.
+- name: the-instruction-formats-have-been-rearranged
+  description: The instruction formats have been rearranged to make immediate encoding more efficient.
+  type: implementation_deferral
+  constraints: This sentence indicates a change in format for efficiency, suggesting it's not a mandatory
+    requirement but an improvement.
+- name: the-base-isa-has-been-defined
+  description: The base ISA has been defined to have a little-endian memory system, with big-endian or
+    bi-endian as non-standard variants.
+  type: optionality
+  constraints: This sentence specifies little-endian as standard but allows for big-endian and bi-endian
+    as optional or non-standard variants.
+- name: amos-and-lr-sc-can-support
+  description: AMOs and LR/SC can support the release consistency model.
+  type: permission_modal
+  constraints: This describes a capability (supporting the release consistency model) that is not mandatory
+    but an option for AMOs and LR/SC instructions.
+- name: an-amo-for-fetch-and-xor
+  description: An AMO for fetch-and-XOR (AMOXOR) has been added, and the encoding for AMOSWAP has been
+    changed to make room.
+  type: implementation_deferral
+  constraints: This sentence describes an addition (AMOXOR) and a change (AMOSWAP encoding), indicating
+    implementation-defined behavior.
+- name: the-jal-instruction-has-now-moved
+  description: The JAL instruction has now moved to the U-Type format with an explicit destination register,
+    and the J instruction has been dropped being replaced by JAL with rd = x0 .
+  type: implementation_deferral
+  constraints: This sentence describes a change in instruction formats, indicating that the J instruction
+    was removed and replaced by JAL, suggesting implementation-defined behavior.
+- name: the-static-hints-on-the-jalr
+  description: The static hints on the JALR instruction have been dropped. The hints are redundant with
+    the rd and rs1 register specifiers for code compliant with the standard calling convention.
+  type: implementation_deferral
+  constraints: This sentence indicates that static hints were removed, implying optional or implementation-defined
+    behavior related to the standard calling convention.
+- name: the-jalr-instruction-now-clears-the
+  description: The JALR instruction now clears the lowest bit of the calculated target address, to simplify
+    hardware and to allow auxiliary information to be stored in function pointers.
+  type: implementation_deferral
+  constraints: This sentence describes a change in behavior for the JALR instruction, indicating implementation-defined
+    or vendor/platform-dependent behavior.
+- name: the-mftx-s-and-mftx-d
+  description: The MFTX.S and MFTX.D instructions have been renamed to FMV.X.S and FMV.X.D, respectively.
+    Similarly, MXTF.S and MXTF.D instructions have been renamed to FMV.S.X and FMV.D.X, respectively.
+  type: vendor_specific
+  constraints: This sentence describes renaming of instructions, indicating vendor/platform-dependent
+    behavior.
+- name: the-mffsr-and-mtfsr-instructions-have
+  description: The MFFSR and MTFSR instructions have been renamed to FRCSR and FSCSR, respectively. FRRM,
+    FSRM, FRFLAGS, and FSFLAGS instructions have been added to individually access the rounding mode and
+    exception flags subfields of the fcsr .
+  type: vendor_specific
+  constraints: This sentence describes renaming and addition of new instructions, indicating vendor/platform-defined
+    behavior.
+- name: the-fmv-x-s-and-fmv
+  description: The FMV.X.S and FMV.X.D instructions now source their operands from rs1 , instead of rs2
+    . This change simplifies datapath design.
+  type: implementation_deferral
+  constraints: This sentence describes a change in operand sourcing for specific instructions, indicating
+    implementation-defined behavior.
+- name: fclass-s-and-fclass-d-floating
+  description: FCLASS.S and FCLASS.D floating-point classify instructions have been added.
+  type: implementation_deferral
+  constraints: This sentence describes the addition of new instructions, which could be considered vendor/platform-specific
+    or implementation-defined behavior.
+- name: a-simpler-nan-generation-and-propagation
+  description: A simpler NaN generation and propagation scheme has been adopted.
+  type: implementation_deferral
+  constraints: This sentence describes a change in behavior for handling NaN values, indicating implementation-defined
+    behavior.
+- name: for-rv32i-the-system-performance-counters
+  description: For RV32I, the system performance counters have been extended to 64-bits wide, with separate
+    read access to the upper and lower 32 bits.
+  type: implementation_deferral
+  constraints: This sentence describes an extension of system performance counters, indicating implementation
+    or architecture-specific behavior.
+- name: canonical-nop-and-mv-encodings-have
+  description: Canonical NOP and MV encodings have been defined.
+  type: implementation_deferral
+  constraints: This sentence describes the definition of specific encodings, which could be considered
+    implementation-defined or vendor/platform-dependent.
+- name: standard-instruction-length-encodings-have-been
+  description: Standard instruction-length encodings have been defined for 48-bit, 64-bit, and >64-bit
+    instructions.
+  type: implementation_deferral
+  constraints: This sentence describes the definition of standard encodings, which could be considered
+    implementation-defined or vendor/platform-dependent.
+- name: description-of-a-128-bit-address
+  description: Description of a 128-bit address space variant, RV128, has been added.
+  type: vendor_specific
+  constraints: This sentence describes the addition of a new architecture variant, indicating vendor/platform-specific
+    behavior.
+- name: major-opcodes-in-the-32-bit
+  description: Major opcodes in the 32-bit base instruction format have been allocated for user-defined
+    custom extensions.
+  type: implementation_deferral
+  constraints: This sentence describes allocation of opcodes for user-defined extensions, indicating implementation
+    or vendor/platform-defined behavior.
+- name: an-isa-that-avoids-over-architecting
+  description: An ISA that avoids 'over-architecting' for a particular microarchitecture style (e.g.,
+    microcoded, in-order, decoupled, out-of-order) or implementation technology (e.g., full-custom, ASIC,
+    FPGA), but which allows efficient implementation in any of these.
+  type: implementation_deferral
+  constraints: This sentence describes flexibility in implementation styles and technologies, indicating
+    that the ISA can be efficiently implemented across various microarchitectures and technologies without
+    being specifically optimized for one.
+- name: an-isa-separated-into-a-small
+  description: An ISA separated into a small base integer ISA, usable by itself as a base for customized
+    accelerators or for educational purposes, and optional standard extensions, to support general-purpose
+    software development.
+  type: optionality
+  constraints: This sentence highlights the modular design of the ISA with a base and optional extensions,
+    suggesting that not all components are mandatory and can be chosen based on specific needs.
+- name: optional-variable-length-instructions-to-both
+  description: Optional variable-length instructions to both expand available instruction encoding space
+    and to support an optional dense instruction encoding for improved performance, static code size,
+    and energy efficiency.
+  type: permission_modal
+  constraints: The sentence explicitly mentions 'optional' variable-length instructions and their use
+    for improvement purposes, indicating that this feature is not mandatory.
+- name: a-risc-v-hardware-platform-can
+  description: A RISC-V hardware platform can contain one or more RISC-V-compatible processing cores together
+    with other non-RISC-V-compatible cores, fixed-function accelerators, various physical memory structures,
+    I/O devices, and an interconnect structure to allow the components to communicate.
+  type: variability
+  constraints: This sentence describes a system that can include diverse components, including non-RISC-V
+    compatible cores and accelerators, indicating variability and optionality in hardware composition.
+- name: a-risc-v-core-might-have
+  description: A RISC-V core might have additional specialized instruction-set extensions or an added
+    coprocessor.
+  type: optionality
+  constraints: This sentence indicates that a RISC-V core can optionally include extra instruction set
+    extensions or a coprocessor, showing implementation-defined behavior.
+- name: we-use-the-term-accelerator-to
+  description: We use the term accelerator to refer to either a non-programmable fixed-function unit or
+    a core that can operate autonomously but is specialized for certain tasks.
+  type: variability
+  constraints: This sentence describes an accelerator as potentially being programmable or not, indicating
+    variability and optionality in system design.
+- name: the-system-level-organization-of-a
+  description: The system-level organization of a RISC-V hardware platform can range from a single-core
+    microcontroller to a many-thousand-node cluster of shared-memory manycore server nodes.
+  type: variability
+  constraints: This sentence describes a wide range of possible system organizations, indicating variability
+    and optionality in system architecture.
+- name: the-implementation-of-a-risc-v
+  description: The implementation of a RISC-V execution environment can be pure hardware, pure software,
+    or a combination of hardware and software.
+  type: implementation_deferral
+  constraints: This sentence describes the flexibility in implementing an execution environment, allowing
+    for combinations of hardware and software.
+- name: for-example-opcode-traps-and-software
+  description: For example, opcode traps and software emulation can be used to implement functionality
+    not provided in hardware.
+  type: implementation_deferral
+  constraints: This sentence indicates that certain features can be implemented through software (software
+    emulation) when hardware does not provide them, showing optionality in implementation.
+- name: a-bare-hardware-platform-can-be
+  description: A bare hardware platform can be considered to define an EEI, where the accessible harts,
+    memory, and other devices populate the environment, and the initial state is that at power-on reset.
+  type: variability
+  constraints: This describes a specific type of execution environment (bare metal) as one possibility
+    among others, indicating variability in how EEIs can be defined.
+- name: generally-most-software-is-designed-to
+  description: Generally, most software is designed to use a more abstract interface to the hardware,
+    as more abstract EEIs provide greater portability across different hardware platforms.
+  type: convention_or_recommendation
+  constraints: This sentence suggests that while bare metal EEIs exist, more abstract interfaces are preferred
+    for broader compatibility, indicating optionality in choosing an EEI level.
+- name: an-execution-environment-implementation-might-time
+  description: An execution environment implementation might time-multiplex a set of guest harts onto
+    fewer host harts provided by its own execution environment but must do so in a way that guest harts
+    operate like independent hardware threads.
+  type: optionality
+  constraints: This sentence describes an optional method for an execution environment to manage resources,
+    stating 'might' and specifying a way to behave rather than a strict requirement.
+- name: in-particular-if-there-are-more
+  description: In particular, if there are more guest harts than host harts then the execution environment
+    must be able to preempt the guest harts and must not wait indefinitely for guest software on a guest
+    hart to "yield" control of the guest hart.
+  type: convention_or_recommendation
+  constraints: This sentence outlines a requirement but with conditional language ('in particular if'),
+    indicating it's a specific case rather than an absolute necessity across all scenarios.

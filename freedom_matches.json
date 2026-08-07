@@ -1,0 +1,242 @@
+[
+  {
+    "sentence": "Addition of the Zalasr extension for Load-Acquire/Store-Release operations.",
+    "reason": "This sentence describes an addition, implying it's optional or discretionary as not all RISC-V implementations may support or choose to implement this feature.",
+    "category": "optionality"
+  },
+  {
+    "sentence": "The inclusion of all ratified extensions through May 2025.",
+    "reason": "This sentence indicates the inclusion is conditional on extensions being ratified, suggesting optionality based on ratification status.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "Addition of the BFloat16-precision Floating Point extension.",
+    "reason": "This describes an added feature which may not be present in all RISC-V implementations, indicating optionality.",
+    "category": "optionality"
+  },
+  {
+    "sentence": "Addition of the Zabha extension for Byte and Halfword Atomic Memory Operations.",
+    "reason": "Similar to other additions listed, this implies an optional feature dependent on implementation choice.",
+    "category": "optionality"
+  },
+  {
+    "sentence": "The draft Zam extension has been removed, in favor of the definition of a misaligned atomicity granule PMA.",
+    "reason": "This sentence describes removal of a draft extension, indicating that its inclusion was not mandatory and subject to change.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "The concept of vacant memory regions has been superseded by inaccessible memory or I/O regions.",
+    "reason": "This describes a change in convention, indicating that while it's documented, the specific handling (vacant vs. inaccessible) may vary across implementations.",
+    "category": "convention_or_recommendation"
+  },
+  {
+    "sentence": "The removal of unratified content, including the sketch of the RV128I base ISA.",
+    "reason": "This sentence describes the removal of unratified material, indicating that such content is not mandatory and subject to implementation decisions.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "Changed description of misaligned load and store behavior. The specification now allows visible misaligned address traps in execution environment interfaces, rather than just mandating invisible handling of misaligned loads and stores in user mode.",
+    "reason": "This sentence describes a change from mandatory invisible handling to optional visible handling of misaligned loads and stores, allowing for misaligned address traps.",
+    "category": "variability"
+  },
+  {
+    "sentence": "Moved FENCE.I out of the mandatory base and into a separate extension, with Zifencei ISA name. FENCE.I was removed from the Linux user ABI and is problematic in implementations with large incoherent instruction and data caches. However, it remains the only standard instruction-fetch coherence mechanism.",
+    "reason": "This sentence describes moving FENCE.I to an optional extension, acknowledging its problematic nature in certain implementations while noting it as the sole standard for instruction-fetch coherence.",
+    "category": "optionality"
+  },
+  {
+    "sentence": "Counter/timer instructions are now not considered part of the mandatory base ISA, and so CSR instructions were moved into separate chapter and marked as version 2.0, with the unprivileged counters moved into another separate chapter. The counters are not ready for ratification as there are outstanding issues, including counter inaccuracies.",
+    "reason": "This sentence indicates that counter/timer instructions are no longer mandatory but are considered part of a separate, non-ratified version (2.0), highlighting their current unfinished and optional status.",
+    "category": "optionality"
+  },
+  {
+    "sentence": "A CSR-access ordering model has been added.",
+    "reason": "This sentence describes the addition of a CSR-access ordering model, which implies an implementation-defined or conventional aspect since specific ordering details may vary across implementations.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "To date, no parts of the standard have been officially ratified by the RISC-V Foundation, but the components labeled \u201cfrozen\u201d above are not expected to change during the ratification process beyond resolving ambiguities and holes in the specification.",
+    "reason": "This sentence indicates that certain parts of the standard may change during ratification, implying optionality or implementation deferral.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "Removed text of P extension chapter as now superseded by active task group documents.",
+    "reason": "This sentence indicates that the P extension chapter has been removed in favor of other documents, suggesting vendor/platform-dependency or discretionary behavior.",
+    "category": "vendor_platform_dependency"
+  },
+  {
+    "sentence": "A draft proposal of the V vector instruction-set extension.",
+    "reason": "This sentence presents a draft proposal, indicating that it is not yet finalized and subject to change, thus showing optional or discretionary behavior.",
+    "category": "permission_modal"
+  },
+  {
+    "sentence": "An early draft proposal of the N user-level traps extension.",
+    "reason": "This sentence presents an early draft proposal, indicating that it is not yet finalized and subject to change, thus showing optional or discretionary behavior.",
+    "category": "permission_modal"
+  },
+  {
+    "sentence": "Removal of the calling convention chapter, which has been superseded by the RISC-V ELF psABI Specification (RISC-V ELF PsABI Specification, n.d.).",
+    "reason": "This sentence indicates that the calling convention chapter has been removed in favor of another specification, suggesting vendor/platform-dependency or discretionary behavior.",
+    "category": "vendor_platform_dependency"
+  },
+  {
+    "sentence": "The C extension has been frozen and renumbered version 2.0.",
+    "reason": "This sentence indicates that the C extension is now fixed, but the act of freezing itself implies a previous state of variability or optionality.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "The ISA has been divided into an integer base with several standard extensions.",
+    "reason": "This sentence describes a division of the ISA, implying optionality in choosing which extensions to include.",
+    "category": "optionality"
+  },
+  {
+    "sentence": "The instruction formats have been rearranged to make immediate encoding more efficient.",
+    "reason": "This sentence indicates a change in format for efficiency, suggesting it's not a mandatory requirement but an improvement.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "The base ISA has been defined to have a little-endian memory system, with big-endian or bi-endian as non-standard variants.",
+    "reason": "This sentence specifies little-endian as standard but allows for big-endian and bi-endian as optional or non-standard variants.",
+    "category": "optionality"
+  },
+  {
+    "sentence": "AMOs and LR/SC can support the release consistency model.",
+    "reason": "This describes a capability (supporting the release consistency model) that is not mandatory but an option for AMOs and LR/SC instructions.",
+    "category": "permission_modal"
+  },
+  {
+    "sentence": "An AMO for fetch-and-XOR (AMOXOR) has been added, and the encoding for AMOSWAP has been changed to make room.",
+    "reason": "This sentence describes an addition (AMOXOR) and a change (AMOSWAP encoding), indicating implementation-defined behavior.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "The JAL instruction has now moved to the U-Type format with an explicit destination register, and the J instruction has been dropped being replaced by JAL with rd = x0 .",
+    "reason": "This sentence describes a change in instruction formats, indicating that the J instruction was removed and replaced by JAL, suggesting implementation-defined behavior.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "The static hints on the JALR instruction have been dropped. The hints are redundant with the rd and rs1 register specifiers for code compliant with the standard calling convention.",
+    "reason": "This sentence indicates that static hints were removed, implying optional or implementation-defined behavior related to the standard calling convention.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "The JALR instruction now clears the lowest bit of the calculated target address, to simplify hardware and to allow auxiliary information to be stored in function pointers.",
+    "reason": "This sentence describes a change in behavior for the JALR instruction, indicating implementation-defined or vendor/platform-dependent behavior.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "The MFTX.S and MFTX.D instructions have been renamed to FMV.X.S and FMV.X.D, respectively. Similarly, MXTF.S and MXTF.D instructions have been renamed to FMV.S.X and FMV.D.X, respectively.",
+    "reason": "This sentence describes renaming of instructions, indicating vendor/platform-dependent behavior.",
+    "category": "vendor_specific"
+  },
+  {
+    "sentence": "The MFFSR and MTFSR instructions have been renamed to FRCSR and FSCSR, respectively. FRRM, FSRM, FRFLAGS, and FSFLAGS instructions have been added to individually access the rounding mode and exception flags subfields of the fcsr .",
+    "reason": "This sentence describes renaming and addition of new instructions, indicating vendor/platform-defined behavior.",
+    "category": "vendor_specific"
+  },
+  {
+    "sentence": "The FMV.X.S and FMV.X.D instructions now source their operands from rs1 , instead of rs2 . This change simplifies datapath design.",
+    "reason": "This sentence describes a change in operand sourcing for specific instructions, indicating implementation-defined behavior.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "FCLASS.S and FCLASS.D floating-point classify instructions have been added.",
+    "reason": "This sentence describes the addition of new instructions, which could be considered vendor/platform-specific or implementation-defined behavior.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "A simpler NaN generation and propagation scheme has been adopted.",
+    "reason": "This sentence describes a change in behavior for handling NaN values, indicating implementation-defined behavior.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "For RV32I, the system performance counters have been extended to 64-bits wide, with separate read access to the upper and lower 32 bits.",
+    "reason": "This sentence describes an extension of system performance counters, indicating implementation or architecture-specific behavior.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "Canonical NOP and MV encodings have been defined.",
+    "reason": "This sentence describes the definition of specific encodings, which could be considered implementation-defined or vendor/platform-dependent.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "Standard instruction-length encodings have been defined for 48-bit, 64-bit, and >64-bit instructions.",
+    "reason": "This sentence describes the definition of standard encodings, which could be considered implementation-defined or vendor/platform-dependent.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "Description of a 128-bit address space variant, RV128, has been added.",
+    "reason": "This sentence describes the addition of a new architecture variant, indicating vendor/platform-specific behavior.",
+    "category": "vendor_specific"
+  },
+  {
+    "sentence": "Major opcodes in the 32-bit base instruction format have been allocated for user-defined custom extensions.",
+    "reason": "This sentence describes allocation of opcodes for user-defined extensions, indicating implementation or vendor/platform-defined behavior.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "An ISA that avoids 'over-architecting' for a particular microarchitecture style (e.g., microcoded, in-order, decoupled, out-of-order) or implementation technology (e.g., full-custom, ASIC, FPGA), but which allows efficient implementation in any of these.",
+    "reason": "This sentence describes flexibility in implementation styles and technologies, indicating that the ISA can be efficiently implemented across various microarchitectures and technologies without being specifically optimized for one.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "An ISA separated into a small base integer ISA, usable by itself as a base for customized accelerators or for educational purposes, and optional standard extensions, to support general-purpose software development.",
+    "reason": "This sentence highlights the modular design of the ISA with a base and optional extensions, suggesting that not all components are mandatory and can be chosen based on specific needs.",
+    "category": "optionality"
+  },
+  {
+    "sentence": "Optional variable-length instructions to both expand available instruction encoding space and to support an optional dense instruction encoding for improved performance, static code size, and energy efficiency.",
+    "reason": "The sentence explicitly mentions 'optional' variable-length instructions and their use for improvement purposes, indicating that this feature is not mandatory.",
+    "category": "permission_modal"
+  },
+  {
+    "sentence": "A RISC-V hardware platform can contain one or more RISC-V-compatible processing cores together with other non-RISC-V-compatible cores, fixed-function accelerators, various physical memory structures, I/O devices, and an interconnect structure to allow the components to communicate.",
+    "reason": "This sentence describes a system that can include diverse components, including non-RISC-V compatible cores and accelerators, indicating variability and optionality in hardware composition.",
+    "category": "variability"
+  },
+  {
+    "sentence": "A RISC-V core might have additional specialized instruction-set extensions or an added coprocessor.",
+    "reason": "This sentence indicates that a RISC-V core can optionally include extra instruction set extensions or a coprocessor, showing implementation-defined behavior.",
+    "category": "optionality"
+  },
+  {
+    "sentence": "We use the term accelerator to refer to either a non-programmable fixed-function unit or a core that can operate autonomously but is specialized for certain tasks.",
+    "reason": "This sentence describes an accelerator as potentially being programmable or not, indicating variability and optionality in system design.",
+    "category": "variability"
+  },
+  {
+    "sentence": "The system-level organization of a RISC-V hardware platform can range from a single-core microcontroller to a many-thousand-node cluster of shared-memory manycore server nodes.",
+    "reason": "This sentence describes a wide range of possible system organizations, indicating variability and optionality in system architecture.",
+    "category": "variability"
+  },
+  {
+    "sentence": "The implementation of a RISC-V execution environment can be pure hardware, pure software, or a combination of hardware and software.",
+    "reason": "This sentence describes the flexibility in implementing an execution environment, allowing for combinations of hardware and software.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "For example, opcode traps and software emulation can be used to implement functionality not provided in hardware.",
+    "reason": "This sentence indicates that certain features can be implemented through software (software emulation) when hardware does not provide them, showing optionality in implementation.",
+    "category": "implementation_deferral"
+  },
+  {
+    "sentence": "A bare hardware platform can be considered to define an EEI, where the accessible harts, memory, and other devices populate the environment, and the initial state is that at power-on reset.",
+    "reason": "This describes a specific type of execution environment (bare metal) as one possibility among others, indicating variability in how EEIs can be defined.",
+    "category": "variability"
+  },
+  {
+    "sentence": "Generally, most software is designed to use a more abstract interface to the hardware, as more abstract EEIs provide greater portability across different hardware platforms.",
+    "reason": "This sentence suggests that while bare metal EEIs exist, more abstract interfaces are preferred for broader compatibility, indicating optionality in choosing an EEI level.",
+    "category": "convention_or_recommendation"
+  },
+  {
+    "sentence": "An execution environment implementation might time-multiplex a set of guest harts onto fewer host harts provided by its own execution environment but must do so in a way that guest harts operate like independent hardware threads.",
+    "reason": "This sentence describes an optional method for an execution environment to manage resources, stating 'might' and specifying a way to behave rather than a strict requirement.",
+    "category": "optionality"
+  },
+  {
+    "sentence": "In particular, if there are more guest harts than host harts then the execution environment must be able to preempt the guest harts and must not wait indefinitely for guest software on a guest hart to \"yield\" control of the guest hart.",
+    "reason": "This sentence outlines a requirement but with conditional language ('in particular if'), indicating it's a specific case rather than an absolute necessity across all scenarios.",
+    "category": "convention_or_recommendation"
+  }
+]
